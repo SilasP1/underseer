@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Underseer Technologies</title>
+  <meta name="description" content="Underseer Technologies develops field sensing and decision-support systems for infrastructure and security applications.">
+  <meta name="theme-color" content="#08110f">
+  <meta property="og:title" content="Underseer Technologies">
+  <meta property="og:description" content="Field sensing and decision support for infrastructure and security.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://underseer-technologies.com/">
+  <link rel="canonical" href="https://underseer-technologies.com/">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #07100e;
+      --panel: rgba(17, 31, 27, .72);
+      --text: #edf4ef;
+      --muted: #a6b5ad;
+      --line: rgba(216, 233, 223, .14);
+      --accent: #a7d3b7;
+      --accent-strong: #d0edda;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 76% 18%, rgba(55, 105, 81, .20), transparent 32rem),
+        radial-gradient(circle at 12% 78%, rgba(44, 77, 67, .17), transparent 28rem),
+        var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      opacity: .22;
+      background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--text);
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .mark {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 1px solid rgba(167, 211, 183, .65);
+      border-radius: 50%;
+    }
+
+    .mark::after {
+      width: 8px;
+      height: 8px;
+      content: "";
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(167, 211, 183, .7);
+    }
+
+    .status {
+      display: inline-flex;
+      gap: 9px;
+      align-items: center;
+      color: var(--muted);
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(167, 211, 183, .62);
+    }
+
+    main {
+      display: grid;
+      min-height: calc(100vh - 85px);
+      align-content: space-between;
+      padding: clamp(72px, 12vh, 140px) 0 34px;
+    }
+
+    .hero { max-width: 900px; }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 13ch;
+      margin: 0;
+      font-size: clamp(3.3rem, 8vw, 7.4rem);
+      font-weight: 560;
+      letter-spacing: -.065em;
+      line-height: .94;
+      text-wrap: balance;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 34px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.65;
+    }
+
+    .systems {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: clamp(62px, 10vh, 112px);
+    }
+
+    .system {
+      position: relative;
+      min-height: 190px;
+      padding: 26px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+    }
+
+    .system::after {
+      position: absolute;
+      right: -60px;
+      bottom: -90px;
+      width: 190px;
+      height: 190px;
+      content: "";
+      border: 1px solid rgba(167, 211, 183, .13);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 28px rgba(167, 211, 183, .025),
+        0 0 0 56px rgba(167, 211, 183, .018);
+    }
+
+    .system-label {
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .system h2 {
+      margin: 36px 0 10px;
+      font-size: 1.45rem;
+      font-weight: 590;
+      letter-spacing: -.025em;
+    }
+
+    .system p {
+      max-width: 44ch;
+      margin: 0;
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.55;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 34px;
+      padding-top: 26px;
+      color: #7f9188;
+      border-top: 1px solid var(--line);
+      font-size: .76rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .shell { width: min(calc(100% - 28px), var(--max)); }
+      header { min-height: 72px; }
+      .brand { font-size: .75rem; letter-spacing: .11em; }
+      .status span:last-child { display: none; }
+      main { min-height: calc(100vh - 73px); padding-top: 70px; }
+      h1 { font-size: clamp(3.1rem, 15vw, 5rem); }
+      .intro { margin-top: 26px; }
+      .systems { grid-template-columns: 1fr; margin-top: 58px; }
+      .system { min-height: 170px; }
+      footer { gap: 18px; align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero > *, .system {
+        opacity: 0;
+        transform: translateY(14px);
+        animation: enter .7s ease forwards;
+      }
+      .hero > :nth-child(2) { animation-delay: .08s; }
+      .hero > :nth-child(3) { animation-delay: .16s; }
+      .system:first-child { animation-delay: .24s; }
+      .system:last-child { animation-delay: .32s; }
+      @keyframes enter { to { opacity: 1; transform: translateY(0); } }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="brand" href="/" aria-label="Underseer Technologies home">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Underseer Technologies</span>
+      </a>
+      <div class="status" aria-label="Company status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Active development</span>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="hero" aria-labelledby="hero-title">
+          <p class="eyebrow">Field intelligence systems</p>
+          <h1 id="hero-title">See what the surface misses.</h1>
+          <p class="intro">
+            Underseer develops field sensing and decision-support systems for
+            infrastructure and security applications. Our work is currently in
+            prototype development and field validation.
+          </p>
+        </section>
+
+        <section class="systems" aria-label="Systems in development">
+          <article class="system">
+            <span class="system-label">Sensing layer</span>
+            <h2>Thistle</h2>
+            <p>A distributed seismic wake layer designed to extend awareness beyond the reach of conventional monitoring systems.</p>
+          </article>
+          <article class="system">
+            <span class="system-label">Decision layer</span>
+            <h2>Riskseer</h2>
+            <p>Software that turns field events and operational context into prioritized, reviewable information.</p>
+          </article>
+        </section>
+      </div>
+
+      <footer>
+        <span>Underseer Technologies LLC</span>
+        <span>Orlando, Florida · 2026</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
