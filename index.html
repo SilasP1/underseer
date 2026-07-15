@@ -3,437 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Underseer Technologies | Passive Sensing Systems</title>
+  <title>Underseer Technologies | Field Intelligence Systems</title>
   <meta name="description" content="Underseer Technologies develops passive field sensing and decision-support systems for infrastructure and security applications.">
-  <meta name="theme-color" content="#0b0d0c">
+  <meta name="theme-color" content="#050505">
   <meta property="og:title" content="Underseer Technologies">
-  <meta property="og:description" content="Passive sensing and decision support for infrastructure and security.">
+  <meta property="og:description" content="Field intelligence systems for infrastructure and security.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://underseer-technologies.com/">
   <link rel="canonical" href="https://underseer-technologies.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <style>
-    :root {
-      color-scheme: dark;
-      --ink: #0b0d0c;
-      --ink-2: #111411;
-      --paper: #f1f0e9;
-      --white: #fff;
-      --muted: #a7aaa3;
-      --line: rgba(255, 255, 255, .15);
-      --orange: #feb71b;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--white);
-      background: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: inherit; }
-    .wrap { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; }
-
-    .site-header {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      min-height: 88px;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--line);
-    }
-    .brand {
-      display: inline-flex;
-      gap: 13px;
-      align-items: center;
-      color: var(--white);
-      text-decoration: none;
-    }
-    .brand svg { width: 48px; height: 32px; }
-    .brand-name {
-      font-size: .84rem;
-      font-weight: 800;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-    }
-    nav { display: flex; gap: 30px; align-items: center; }
-    nav a {
-      color: #c6c8c2;
-      font-size: .78rem;
-      letter-spacing: .08em;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    nav a:hover, nav a:focus-visible { color: var(--orange); }
-    .status {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 10px 14px;
-      color: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-    }
-    .status::before {
-      width: 7px;
-      height: 7px;
-      content: "";
-      border-radius: 50%;
-      background: var(--orange);
-      box-shadow: 0 0 12px rgba(254,183,27,.55);
-    }
-
-    .hero {
-      position: relative;
-      display: grid;
-      min-height: 720px;
-      align-items: end;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero::before {
-      position: absolute;
-      inset: 0;
-      content: "";
-      opacity: .72;
-      background:
-        linear-gradient(120deg, rgba(11,13,12,.2), rgba(11,13,12,.92) 70%),
-        repeating-radial-gradient(ellipse at 72% 48%, transparent 0 36px, rgba(254,183,27,.13) 37px 38px);
-    }
-    .hero::after {
-      position: absolute;
-      top: -20%;
-      right: 16%;
-      width: 1px;
-      height: 150%;
-      content: "";
-      background: linear-gradient(transparent, var(--orange), transparent);
-      transform: rotate(34deg);
-      box-shadow: 65px 0 0 rgba(255,255,255,.12), 130px 0 0 rgba(255,255,255,.06);
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 100px 0 78px;
-    }
-    .kicker {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      margin: 0 0 24px;
-      color: var(--orange);
-      font-size: .76rem;
-      font-weight: 700;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-    }
-    .kicker::before { width: 38px; height: 1px; content: ""; background: currentColor; }
-    h1 {
-      max-width: 11ch;
-      margin: 0;
-      font-size: clamp(3.6rem, 8.2vw, 7.8rem);
-      font-weight: 600;
-      letter-spacing: -.065em;
-      line-height: .91;
-      text-wrap: balance;
-    }
-    .hero-copy {
-      display: grid;
-      grid-template-columns: 1fr minmax(280px, 500px);
-      gap: 42px;
-      align-items: end;
-      margin-top: 50px;
-    }
-    .hero-copy p {
-      grid-column: 2;
-      margin: 0;
-      color: #c1c4bc;
-      font-size: clamp(1rem, 1.6vw, 1.18rem);
-      line-height: 1.65;
-    }
-
-    .section { padding: 110px 0; border-bottom: 1px solid var(--line); }
-    .section-head {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
-      margin-bottom: 58px;
-    }
-    .section-index {
-      color: var(--orange);
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-    }
-    h2 {
-      max-width: 18ch;
-      margin: 0;
-      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
-      font-weight: 540;
-      letter-spacing: -.045em;
-      line-height: 1.02;
-    }
-
-    .focus-grid, .system-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-    .focus-card {
-      min-height: 265px;
-      padding: 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--ink-2);
-    }
-    .card-number {
-      color: var(--orange);
-      font-size: .72rem;
-      letter-spacing: .12em;
-    }
-    h3 {
-      margin: 75px 0 14px;
-      font-size: 1.28rem;
-      font-weight: 600;
-      letter-spacing: -.02em;
-    }
-    .focus-card p, .system-card p, .pilot-copy p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .95rem;
-      line-height: 1.6;
-    }
-
-    .systems-section { color: var(--ink); background: var(--paper); }
-    .systems-section .section-head { border-color: rgba(11,13,12,.18); }
-    .systems-section .section-index { color: #a26700; }
-    .system-grid {
-      grid-template-columns: repeat(2, 1fr);
-      border-color: rgba(11,13,12,.18);
-    }
-    .system-card {
-      position: relative;
-      min-height: 390px;
-      padding: 34px;
-      overflow: hidden;
-      border-right: 1px solid rgba(11,13,12,.18);
-      border-bottom: 1px solid rgba(11,13,12,.18);
-    }
-    .system-type {
-      color: #8b5a05;
-      font-size: .72rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-    .system-card h3 { margin: 150px 0 14px; font-size: 2.2rem; }
-    .system-card p { max-width: 48ch; color: #5f625d; }
-    .rings {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      width: 140px;
-      height: 140px;
-      border: 1px solid rgba(11,13,12,.18);
-      border-radius: 50%;
-      box-shadow: 0 0 0 22px rgba(11,13,12,.035), 0 0 0 44px rgba(11,13,12,.025);
-    }
-    .rings::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 9px;
-      height: 9px;
-      content: "";
-      border-radius: 50%;
-      background: var(--orange);
-      transform: translate(-50%, -50%);
-    }
-
-    .pilot-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 90px;
-      align-items: start;
-    }
-    .pilot-copy { max-width: 640px; }
-    .pilot-copy h2 { margin-bottom: 28px; }
-    .steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-    .steps li {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 18px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .steps span { color: var(--orange); font-size: .75rem; }
-    .steps strong { display: block; margin-bottom: 7px; font-size: 1rem; }
-    .steps p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.5; }
-
-    .launch {
-      display: flex;
-      gap: 30px;
-      min-height: 220px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .launch p { max-width: 570px; margin: 0; color: var(--muted); line-height: 1.6; }
-    .launch-badge {
-      flex: none;
-      padding: 16px 20px;
-      color: var(--orange);
-      border: 1px solid rgba(254,183,27,.35);
-      font-size: .76rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      padding: 34px 0;
-      color: #7e817b;
-      font-size: .72rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    @media (max-width: 800px) {
-      .wrap { width: min(calc(100% - 28px), var(--max)); }
-      .site-header { min-height: 74px; }
-      nav a:not(.status) { display: none; }
-      .brand-name { font-size: .68rem; letter-spacing: .1em; }
-      .brand svg { width: 39px; }
-      .status { padding: 9px 11px; font-size: 0; }
-      .hero { min-height: 650px; }
-      .hero-content { padding: 84px 0 54px; }
-      .hero-copy { display: block; margin-top: 34px; }
-      .section { padding: 76px 0; }
-      .section-head { grid-template-columns: 1fr; gap: 18px; margin-bottom: 38px; }
-      .focus-grid, .system-grid { grid-template-columns: 1fr; }
-      .focus-card { min-height: 225px; }
-      .focus-card h3 { margin-top: 55px; }
-      .system-card { min-height: 320px; }
-      .system-card h3 { margin-top: 120px; }
-      .pilot-layout { grid-template-columns: 1fr; gap: 44px; }
-      .launch { padding: 42px 0; align-items: flex-start; flex-direction: column; }
-      footer { gap: 14px; flex-direction: column; }
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      .hero-content > * { opacity: 0; transform: translateY(16px); animation: rise .72s ease forwards; }
-      .hero-content > :nth-child(2) { animation-delay: .08s; }
-      .hero-content > :nth-child(3) { animation-delay: .16s; }
-      @keyframes rise { to { opacity: 1; transform: translateY(0); } }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/script.js" defer></script>
 </head>
 <body>
-  <header class="site-header wrap">
-    <a class="brand" href="#top" aria-label="Underseer Technologies home">
-      <svg viewBox="0 0 72 48" role="img" aria-label="Underseer mark">
-        <path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z" fill="none" stroke="#feb71b" stroke-width="2"/>
-        <circle cx="36" cy="24" r="10" fill="none" stroke="#feb71b" stroke-width="2"/>
-        <circle cx="36" cy="24" r="3.5" fill="#feb71b"/>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Underseer home">
+      <svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true">
+        <path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/>
+        <circle cx="36" cy="24" r="10"/>
+        <circle class="brand-pupil" cx="36" cy="24" r="3.5"/>
       </svg>
-      <span class="brand-name">Underseer Technologies</span>
+      <span>Underseer</span>
     </a>
-    <nav aria-label="Primary navigation">
-      <a href="#focus">Focus</a>
-      <a href="#systems">Systems</a>
-      <a href="#pilots">Pilots</a>
-      <a class="status" href="#status">Active development</a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
+      <span>Menu</span>
+      <i aria-hidden="true"></i>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+      <a href="#mission">Mission</a>
+      <a href="#products">Products</a>
+      <a href="#approach">Approach</a>
+      <a href="#company">Company</a>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-content wrap">
-        <p class="kicker">Passive field intelligence</p>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-field" aria-hidden="true">
+        <span class="scan-line"></span>
+        <span class="signal signal-one"></span>
+        <span class="signal signal-two"></span>
+        <span class="signal signal-three"></span>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Field intelligence systems</p>
         <h1>See what the surface misses.</h1>
-        <div class="hero-copy">
-          <p>Underseer develops passive sensing and decision-support systems for infrastructure and security applications. Current work centers on practical field validation, low-power operation, and integration with existing monitoring systems.</p>
+        <div class="hero-bottom">
+          <p>Underseer develops passive sensing and decision-support systems for infrastructure and security applications.</p>
+          <a class="text-link" href="#products">Explore systems <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+
+      <aside class="hero-logo" aria-label="Underseer Technologies">
+        <img src="/assets/underseer-logo.png" alt="Underseer logo">
+      </aside>
+
+      <div class="hero-meta" aria-label="Company status">
+        <span>Orlando, Florida</span>
+        <span>Prototype development</span>
+        <span>Est. 2025</span>
+      </div>
+    </section>
+
+    <section class="mission section-pad" id="mission">
+      <div class="section-label">01 / Mission</div>
+      <div class="mission-copy">
+        <h2>Awareness should extend beyond the sensor you can see.</h2>
+        <p>Critical sites and temporary deployments often rely on high-fidelity sensors that cannot economically watch every approach, corridor, or blind area. Underseer is building a quiet field layer designed to detect activity, add context, and cue the systems already in place.</p>
+      </div>
+      <div class="mission-principles">
+        <article><span>01</span><h3>Passive by design</h3><p>Observe without adding another continuously transmitting sensor to the field.</p></article>
+        <article><span>02</span><h3>Built around constraints</h3><p>Power, placement, communications, maintenance, and integration are first-order requirements.</p></article>
+        <article><span>03</span><h3>Evidence before scale</h3><p>Performance claims follow controlled testing and representative field validation.</p></article>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="products-head section-pad">
+        <div>
+          <div class="section-label">02 / Products</div>
+          <h2>One field stack.<br>Two operating layers.</h2>
+        </div>
+        <p>Hardware detects the event. Software helps determine why it matters. Both systems are currently in development.</p>
+      </div>
+
+      <div class="product-switcher" role="tablist" aria-label="Underseer products">
+        <button class="product-tab is-active" id="tab-thistle" type="button" role="tab" aria-selected="true" aria-controls="panel-thistle" data-product-tab="thistle">
+          <span>01</span> Thistle
+        </button>
+        <button class="product-tab" id="tab-riskseer" type="button" role="tab" aria-selected="false" aria-controls="panel-riskseer" data-product-tab="riskseer">
+          <span>02</span> Riskseer
+        </button>
+      </div>
+
+      <div class="product-panel thistle-panel is-active" id="panel-thistle" role="tabpanel" aria-labelledby="tab-thistle" data-product-panel="thistle">
+        <div class="product-visual" aria-hidden="true">
+          <div class="ground-line"></div>
+          <div class="node node-a"><i></i></div>
+          <div class="node node-b"><i></i></div>
+          <div class="node node-c"><i></i></div>
+          <div class="wake-rings wake-a"></div>
+          <div class="wake-rings wake-b"></div>
+          <span class="visual-caption">Distributed field layer / conceptual view</span>
+        </div>
+        <div class="product-copy">
+          <p class="product-type">Distributed seismic wake layer</p>
+          <h3>Thistle</h3>
+          <p class="product-lead">A sparse, low-power sensing layer designed to extend awareness beyond conventional monitoring coverage.</p>
+          <dl>
+            <div><dt>Role</dt><dd>Detect ground-coupled activity and cue higher-fidelity systems.</dd></div>
+            <div><dt>Architecture</dt><dd>Distributed sensing nodes with a local integration hub.</dd></div>
+            <div><dt>Status</dt><dd>Prototype development and bench validation.</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="product-panel riskseer-panel" id="panel-riskseer" role="tabpanel" aria-labelledby="tab-riskseer" data-product-panel="riskseer" hidden>
+        <div class="product-visual risk-visual" aria-hidden="true">
+          <div class="risk-grid"></div>
+          <span class="event event-a">EVENT / 07</span>
+          <span class="event event-b">SOURCE / THISTLE</span>
+          <span class="event event-c">REVIEW / PRIORITIZED</span>
+          <div class="risk-pulse"></div>
+          <span class="visual-caption">Operational context layer / conceptual view</span>
+        </div>
+        <div class="product-copy">
+          <p class="product-type">Decision-support software</p>
+          <h3>Riskseer</h3>
+          <p class="product-lead">The software layer above Thistle, intended to turn field events and operational context into prioritized, reviewable information.</p>
+          <dl>
+            <div><dt>Role</dt><dd>Combine detections with location, timing, and operator context.</dd></div>
+            <div><dt>Output</dt><dd>Structured events for review and existing monitoring workflows.</dd></div>
+            <div><dt>Status</dt><dd>Architecture definition alongside Thistle development.</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="section wrap" id="focus">
-      <div class="section-head">
-        <span class="section-index">01 / Focus</span>
-        <h2>Focused systems, narrowly applied.</h2>
+    <section class="stack section-pad" aria-labelledby="stack-title">
+      <div class="section-label">03 / System</div>
+      <div class="stack-heading">
+        <h2 id="stack-title">Designed to complement, not replace.</h2>
+        <p>Underseer is not trying to rebuild the camera, radar, DAS, or VMS. The goal is a low-power layer that makes those systems more aware of where and when to look.</p>
       </div>
-      <div class="focus-grid">
-        <article class="focus-card">
-          <span class="card-number">01</span>
-          <h3>Passive sensing</h3>
-          <p>Observe ground-coupled activity without adding another continuously active high-power sensor to the field.</p>
-        </article>
-        <article class="focus-card">
-          <span class="card-number">02</span>
-          <h3>Low-power operation</h3>
-          <p>Power, communications, maintenance, and deployment friction are treated as first-order system constraints.</p>
-        </article>
-        <article class="focus-card">
-          <span class="card-number">03</span>
-          <h3>Operational context</h3>
-          <p>Field events become more useful when paired with location, timing, operator priorities, and existing systems.</p>
-        </article>
+      <div class="stack-flow" aria-label="Underseer system flow">
+        <div><span>01</span><strong>Field event</strong><small>Ground-coupled activity</small></div>
+        <i aria-hidden="true">→</i>
+        <div><span>02</span><strong>Thistle</strong><small>Detect and localize</small></div>
+        <i aria-hidden="true">→</i>
+        <div><span>03</span><strong>Riskseer</strong><small>Add operational context</small></div>
+        <i aria-hidden="true">→</i>
+        <div><span>04</span><strong>Existing systems</strong><small>Operator review and response</small></div>
       </div>
     </section>
 
-    <section class="section systems-section" id="systems">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-index">02 / Systems</span>
-          <h2>A sensing layer and the software above it.</h2>
-        </div>
-        <div class="system-grid">
-          <article class="system-card">
-            <span class="system-type">Distributed sensing layer</span>
-            <div class="rings" aria-hidden="true"></div>
-            <h3>Thistle</h3>
-            <p>An ultra-low-power seismic wake layer under development to extend awareness beyond the reach of conventional monitoring systems.</p>
-          </article>
-          <article class="system-card">
-            <span class="system-type">Decision-support layer</span>
-            <div class="rings" aria-hidden="true"></div>
-            <h3>Riskseer</h3>
-            <p>Software intended to combine field events with operational context so operators can review what happened and prioritize what matters.</p>
-          </article>
-        </div>
+    <section class="approach" id="approach">
+      <div class="approach-intro section-pad">
+        <div class="section-label">04 / Approach</div>
+        <h2>Deployment follows validation.</h2>
+        <p>Early hardware is expected to expose incorrect assumptions. Underseer advances through bounded tests, instrumented trials, and documented redesign—not polished claims built ahead of evidence.</p>
       </div>
+      <ol class="validation-steps">
+        <li><span>01</span><div><strong>Define</strong><p>Set the environment, event, constraints, and measurable success criteria.</p></div></li>
+        <li><span>02</span><div><strong>Instrument</strong><p>Capture signals, power behavior, false triggers, communications, and environmental conditions.</p></div></li>
+        <li><span>03</span><div><strong>Break</strong><p>Test placement, soil, weather, noise, deployment friction, and integration assumptions.</p></div></li>
+        <li><span>04</span><div><strong>Advance</strong><p>Move forward only when results justify the next prototype or pilot scope.</p></div></li>
+      </ol>
     </section>
 
-    <section class="section wrap" id="pilots">
-      <div class="pilot-layout">
-        <div class="pilot-copy">
-          <span class="section-index">03 / Validation</span>
-          <h2>Deployment follows evidence.</h2>
-          <p>Underseer is in prototype development. Systems will advance through constrained tests and documented field validation before broader operational use.</p>
-        </div>
-        <ol class="steps">
-          <li><span>01</span><div><strong>Bounded deployment</strong><p>Define the environment, detection problem, constraints, and success criteria.</p></div></li>
-          <li><span>02</span><div><strong>Calibration and testing</strong><p>Measure system behavior under representative activity, noise, soil, weather, and placement conditions.</p></div></li>
-          <li><span>03</span><div><strong>Operator review</strong><p>Document findings, limitations, and the evidence required for the next development step.</p></div></li>
-        </ol>
+    <section class="company section-pad" id="company">
+      <div class="company-mark" aria-hidden="true">
+        <svg viewBox="0 0 72 48"><path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/><circle cx="36" cy="24" r="10"/><circle class="brand-pupil" cx="36" cy="24" r="3.5"/></svg>
       </div>
-    </section>
-
-    <section class="launch wrap" id="status">
-      <p><strong>Underseer Technologies is currently building and validating early prototypes.</strong><br>Public product information and pilot availability will expand as results support them.</p>
-      <div class="launch-badge">Orlando, Florida · 2026</div>
+      <div class="company-copy">
+        <div class="section-label">05 / Company</div>
+        <h2>Engineering for the field, not the demo table.</h2>
+        <p>Underseer Technologies is an Orlando-based engineering company developing sensing and decision-support systems for infrastructure and security environments. The company is currently focused on early Thistle prototypes and the architecture required to integrate them responsibly.</p>
+        <div class="company-status"><span></span> Active development / 2026</div>
+      </div>
     </section>
   </main>
 
-  <footer class="wrap">
-    <span>Underseer Technologies LLC</span>
-    <span>Infrastructure sensing · Field intelligence</span>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#top" aria-label="Back to top">
+      <svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/><circle cx="36" cy="24" r="10"/><circle class="brand-pupil" cx="36" cy="24" r="3.5"/></svg>
+      <span>Underseer</span>
+    </a>
+    <p>Underseer Technologies LLC<br>Orlando, Florida</p>
+    <p>Field sensing<br>Decision support</p>
+    <p class="copyright">© 2026 Underseer Technologies</p>
   </footer>
 </body>
 </html>
