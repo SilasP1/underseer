@@ -102,14 +102,34 @@
       </div>
 
       <div class="product-panel thistle-panel is-active" id="panel-thistle" role="tabpanel" aria-labelledby="tab-thistle" data-product-panel="thistle">
-        <div class="product-visual" aria-hidden="true">
-          <div class="ground-line"></div>
-          <div class="node node-a"><i></i></div>
-          <div class="node node-b"><i></i></div>
-          <div class="node node-c"><i></i></div>
-          <div class="wake-rings wake-a"></div>
-          <div class="wake-rings wake-b"></div>
-          <span class="visual-caption">Distributed field layer / conceptual view</span>
+        <div class="product-visual thistle-carousel" data-carousel aria-label="Thistle development gallery">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active" data-carousel-slide>
+              <div class="concept-visual" aria-hidden="true">
+                <div class="ground-line"></div>
+                <div class="node node-a"><i></i></div>
+                <div class="node node-b"><i></i></div>
+                <div class="node node-c"><i></i></div>
+                <div class="wake-rings wake-a"></div>
+                <div class="wake-rings wake-b"></div>
+              </div>
+              <figcaption><span>01 / Conceptual view</span><strong>Distributed field layer</strong></figcaption>
+            </figure>
+            <figure class="carousel-slide prototype-slide" data-carousel-slide hidden>
+              <img src="assets/thistle-field-test.webp" width="825" height="1100" loading="lazy" alt="Early Thistle field testbed installed in soil and connected to a laptop displaying signal data">
+              <figcaption><span>02 / Extremely early testbed</span><strong>Ground-coupled signal capture</strong></figcaption>
+            </figure>
+            <figure class="carousel-slide prototype-slide" data-carousel-slide hidden>
+              <img src="assets/thistle-bench-test.webp" width="825" height="1100" loading="lazy" alt="Open early Thistle bench prototype with hand-wired electronics in a 3D-printed housing">
+              <figcaption><span>03 / Extremely early testbed</span><strong>Architecture and integration work</strong></figcaption>
+            </figure>
+          </div>
+          <div class="carousel-controls">
+            <button type="button" data-carousel-prev aria-label="Previous Thistle image">←</button>
+            <span data-carousel-status aria-live="polite">01 / 03</span>
+            <button type="button" data-carousel-next aria-label="Next Thistle image">→</button>
+          </div>
+          <p class="carousel-disclaimer">Prototype images show early development testbeds—not production hardware or final performance.</p>
         </div>
         <div class="product-copy">
           <p class="product-type">Distributed seismic wake layer</p>
@@ -121,25 +141,6 @@
             <div><dt>Status</dt><dd>Prototype development and bench validation.</dd></div>
           </dl>
         </div>
-        <section class="prototype-proof" aria-labelledby="prototype-proof-title">
-          <div class="prototype-proof-head">
-            <div>
-              <p class="product-type">Development evidence</p>
-              <h4 id="prototype-proof-title">Early testbeds, shown as built.</h4>
-            </div>
-            <p>These images document extremely early Thistle prototypes and field testbeds. They are evidence of hands-on sensing and signal work—not production hardware or a representation of final form, performance, or readiness.</p>
-          </div>
-          <div class="prototype-gallery">
-            <figure>
-              <img src="assets/thistle-field-test.webp" width="825" height="1100" loading="lazy" alt="Early Thistle field testbed installed in soil and connected to a laptop displaying signal data">
-              <figcaption><span>Field testbed / early prototype</span><strong>Ground-coupled signal capture</strong></figcaption>
-            </figure>
-            <figure>
-              <img src="assets/thistle-bench-test.webp" width="825" height="1100" loading="lazy" alt="Open early Thistle bench prototype with hand-wired electronics in a 3D-printed housing">
-              <figcaption><span>Bench assembly / early prototype</span><strong>Architecture and integration work</strong></figcaption>
-            </figure>
-          </div>
-        </section>
       </div>
 
       <div class="product-panel riskseer-panel" id="panel-riskseer" role="tabpanel" aria-labelledby="tab-riskseer" data-product-panel="riskseer" hidden>
@@ -216,7 +217,7 @@
 
     <section class="company section-pad" id="company">
       <figure class="founder-card">
-        <div class="founder-placeholder" aria-label="Portrait placeholder for Silas Powers"><span>SP</span></div>
+        <div class="founder-portrait"><img src="assets/silas-powers.webp" width="825" height="1100" loading="lazy" alt="Silas Powers, founder and CEO of Underseer Technologies"></div>
         <figcaption><strong>Silas Powers</strong><span>Founder &amp; CEO</span></figcaption>
       </figure>
       <div class="company-copy">
@@ -225,6 +226,10 @@
         <p>Founded in 2025, Underseer Technologies is an Orlando-based engineering company developing sensing and decision-support systems for infrastructure and security environments.</p>
         <blockquote><span>Mission</span> Make critical environments more aware through fieldable sensing and decision-support systems that earn trust through evidence.</blockquote>
         <div class="founder-bio"><span>Founder</span><p>Silas Powers is a University of Central Florida mechanical engineering student focused on field-deployable sensing systems, low-power hardware, and infrastructure monitoring. He founded Underseer to turn hands-on prototype work into practical field capability.</p></div>
+        <div class="founder-links" aria-label="Silas Powers contact links">
+          <a href="mailto:silaspowersw2@gmail.com"><span>Email</span>silaspowersw2@gmail.com</a>
+          <a href="https://www.linkedin.com/in/silas-powers-b28302380" target="_blank" rel="noopener noreferrer"><span>Profile</span>LinkedIn ↗</a>
+        </div>
         <div class="company-status"><span></span> Founded 2025 / Active development</div>
       </div>
     </section>
