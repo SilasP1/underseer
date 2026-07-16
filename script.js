@@ -49,25 +49,36 @@ tabs.forEach((tab, index) => {
 
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
-  const previous = carousel.querySelector('[data-carousel-prev]');
-  const next = carousel.querySelector('[data-carousel-next]');
-  const controls = carousel.querySelector('.carousel-controls');
   const status = carousel.querySelector('[data-carousel-status]');
   let current = 0;
+  let timer;
 
   const showSlide = (index) => {
     current = (index + slides.length) % slides.length;
     slides.forEach((slide, slideIndex) => {
       const active = slideIndex === current;
       slide.classList.toggle('is-active', active);
-      slide.hidden = !active;
     });
     if (status) status.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
   };
 
-  controls?.addEventListener('click', (event) => {
-    const button = event.target.closest('button');
-    if (button === previous) showSlide(current - 1);
-    if (button === next) showSlide(current + 1);
-  });
+  const startCarousel = () => {
+    if (timer || slides.length < 2) return;
+    timer = window.setInterval(() => showSlide(current + 1), 5000);
+  };
+
+  const stopCarousel = () => {
+    window.clearInterval(timer);
+    timer = undefined;
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) startCarousel();
+      else stopCarousel();
+    }, { threshold: 0.25 });
+    observer.observe(carousel);
+  } else {
+    startCarousel();
+  }
 });
