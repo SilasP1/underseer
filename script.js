@@ -51,6 +51,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
   const previous = carousel.querySelector('[data-carousel-prev]');
   const next = carousel.querySelector('[data-carousel-next]');
+  const controls = carousel.querySelector('.carousel-controls');
   const status = carousel.querySelector('[data-carousel-status]');
   let current = 0;
 
@@ -64,6 +65,9 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     if (status) status.textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
   };
 
-  previous?.addEventListener('click', () => showSlide(current - 1));
-  next?.addEventListener('click', () => showSlide(current + 1));
+  controls?.addEventListener('click', (event) => {
+    const button = event.target.closest('button');
+    if (button === previous) showSlide(current - 1);
+    if (button === next) showSlide(current + 1);
+  });
 });
