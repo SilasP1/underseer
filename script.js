@@ -1,8 +1,8 @@
 const header = document.querySelector('[data-header]');
 const menuToggle = document.querySelector('[data-menu-toggle]');
 const nav = document.querySelector('[data-nav]');
-const tabs = [...document.querySelectorAll('[data-product-tab]')];
-const panels = [...document.querySelectorAll('[data-product-panel]')];
+const companyMenu = document.querySelector('[data-company-menu]');
+const companyToggle = document.querySelector('[data-company-toggle]');
 
 const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 16);
 updateHeader();
@@ -21,30 +21,23 @@ nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () =
   document.body.classList.remove('menu-open');
 }));
 
-const selectProduct = (name) => {
-  tabs.forEach((tab) => {
-    const active = tab.dataset.productTab === name;
-    tab.classList.toggle('is-active', active);
-    tab.setAttribute('aria-selected', String(active));
-    tab.tabIndex = active ? 0 : -1;
-  });
-  panels.forEach((panel) => {
-    const active = panel.dataset.productPanel === name;
-    panel.classList.toggle('is-active', active);
-    panel.hidden = !active;
-  });
+const setCompanyMenu = (open) => {
+  companyMenu?.classList.toggle('is-open', open);
+  companyToggle?.setAttribute('aria-expanded', String(open));
 };
 
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => selectProduct(tab.dataset.productTab));
-  tab.addEventListener('keydown', (event) => {
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
-    event.preventDefault();
-    const direction = event.key === 'ArrowRight' ? 1 : -1;
-    const next = (index + direction + tabs.length) % tabs.length;
-    selectProduct(tabs[next].dataset.productTab);
-    tabs[next].focus();
-  });
+companyToggle?.addEventListener('click', () => {
+  setCompanyMenu(companyToggle.getAttribute('aria-expanded') !== 'true');
+});
+
+document.addEventListener('click', (event) => {
+  if (!companyMenu?.contains(event.target)) setCompanyMenu(false);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  setCompanyMenu(false);
+  companyToggle?.focus();
 });
 
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
