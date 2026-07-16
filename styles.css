@@ -211,9 +211,11 @@ h1 { max-width: 9.5ch; margin: 0; font-size: clamp(4.3rem, 9vw, 9.5rem); font-we
 .contact-band { border-top: 1px solid var(--line); }
 .contact-band h2 { max-width: 900px; margin-top: 38px; }
 .contact-band > p { max-width: 680px; margin: 35px 0 45px; color: var(--gray); font-size: 1.05rem; line-height: 1.7; }
-.contact-link { display: inline-flex; gap: 24px; align-items: center; padding: 18px 0; color: var(--white); border-bottom: 1px solid var(--line); font-size: clamp(1rem, 2vw, 1.35rem); text-decoration: none; }
+.contact-link { display: inline-flex; width: max-content; gap: 24px; align-items: center; padding: 18px 0; color: var(--white); border: 0; border-bottom: 1px solid var(--line); background: transparent; cursor: pointer; font-size: clamp(1rem, 2vw, 1.35rem); text-decoration: none; }
 .opportunities .contact-link { color: var(--black); border-color: var(--line-dark); }
 .contact-link span { color: var(--signal); }
+.copy-toast { position: fixed; right: 24px; bottom: 24px; z-index: 100; padding: 15px 20px; color: var(--black); opacity: 0; visibility: hidden; background: var(--signal); box-shadow: 0 14px 40px rgba(0,0,0,.35); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; transform: translateY(14px); transition: opacity .2s, transform .2s, visibility .2s; }
+.copy-toast.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
 
 .company { display: grid; min-height: auto; grid-template-columns: minmax(300px, 420px) minmax(0, 1fr); gap: clamp(55px, 8vw, 110px); align-items: start; overflow: hidden; }
 .company.section-pad { padding-top: clamp(90px, 8vw, 125px); padding-bottom: clamp(90px, 8vw, 125px); }
