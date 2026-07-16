@@ -232,9 +232,9 @@ h1 { max-width: 9.5ch; margin: 0; font-size: clamp(4.3rem, 9vw, 9.5rem); font-we
 .founder-bio { display: grid; grid-template-columns: 90px 1fr; gap: 24px; max-width: 760px; padding: 22px 0; border-bottom: 1px solid var(--line); }
 .founder-bio p { margin: 0; color: var(--gray); line-height: 1.7; }
 .founder-links { display: grid; max-width: 760px; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
-.founder-links a { display: grid; gap: 8px; padding: 18px 0; color: var(--white); font-size: .82rem; text-decoration: none; }
-.founder-links a + a { padding-left: 28px; border-left: 1px solid var(--line); }
-.founder-links a:hover { color: var(--signal); }
+.founder-links a, .founder-links button { display: grid; gap: 8px; padding: 18px 0; color: var(--white); border: 0; background: transparent; cursor: pointer; font-size: .82rem; text-align: left; text-decoration: none; }
+.founder-links > * + * { padding-left: 28px; border-left: 1px solid var(--line); }
+.founder-links a:hover, .founder-links button:hover { color: var(--signal); }
 .founder-links span { color: var(--dim); font-size: .62rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .company-status { display: inline-flex; gap: 11px; align-items: center; color: #c3c4bf; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
 .company-status span { width: 7px; height: 7px; border-radius: 50%; background: var(--signal); box-shadow: 0 0 12px rgba(254,183,27,.6); }
@@ -244,8 +244,8 @@ h1 { max-width: 9.5ch; margin: 0; font-size: clamp(4.3rem, 9vw, 9.5rem); font-we
 .footer-brand { color: var(--white); }
 .site-footer p { margin: 0; }
 .footer-links { display: grid; gap: 8px; align-content: start; }
-.footer-links a { width: max-content; color: #a7a8a2; text-decoration: none; }
-.footer-links a:hover { color: var(--signal); }
+.footer-links a, .footer-links button { width: max-content; padding: 0; color: #a7a8a2; border: 0; background: transparent; cursor: pointer; font: inherit; letter-spacing: inherit; text-decoration: none; text-transform: inherit; }
+.footer-links a:hover, .footer-links button:hover { color: var(--signal); }
 .copyright { text-align: right; }
 
 @media (max-width: 960px) {
@@ -301,7 +301,7 @@ h1 { max-width: 9.5ch; margin: 0; font-size: clamp(4.3rem, 9vw, 9.5rem); font-we
   .carousel-status span { right: 14px; bottom: 14px; }
   .founder-bio { grid-template-columns: 1fr; gap: 0; }
   .founder-links { grid-template-columns: 1fr; }
-  .founder-links a + a { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
+  .founder-links > * + * { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
   .node { width: 38px; height: 60px; }
   .product-copy h3 { margin-top: 70px; }
   .product-copy dl div { grid-template-columns: 65px 1fr; }
