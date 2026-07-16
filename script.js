@@ -40,6 +40,44 @@ document.addEventListener('keydown', (event) => {
   companyToggle?.focus();
 });
 
+document.querySelectorAll('[data-copy-email]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const email = button.dataset.copyEmail;
+    const original = button.innerHTML;
+
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch {
+      const field = document.createElement('textarea');
+      field.value = email;
+      field.setAttribute('readonly', '');
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      document.execCommand('copy');
+      field.remove();
+    }
+
+    let toast = document.querySelector('[data-copy-toast]');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'copy-toast';
+      toast.dataset.copyToast = '';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+
+    button.textContent = 'Email copied';
+    toast.textContent = 'Email copied';
+    toast.classList.add('is-visible');
+    window.clearTimeout(toast.hideTimer);
+    toast.hideTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 2200);
+    window.setTimeout(() => { button.innerHTML = original; }, 2200);
+  });
+});
+
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const slides = [...carousel.querySelectorAll('[data-carousel-slide]')];
   const status = carousel.querySelector('[data-carousel-status]');
