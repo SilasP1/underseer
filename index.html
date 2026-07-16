@@ -3,116 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Underseer Technologies | Field Intelligence Systems</title>
-  <meta name="description" content="Underseer Technologies develops passive field sensing and decision-support systems for infrastructure and security applications.">
+  <title>Underseer Technologies | Field Sensing Systems</title>
+  <meta name="description" content="Underseer Technologies develops distributed seismic sensing hardware and decision-support software for infrastructure and security applications.">
   <meta name="theme-color" content="#050505">
   <meta property="og:title" content="Underseer Technologies">
-  <meta property="og:description" content="Field intelligence systems for infrastructure and security.">
+  <meta property="og:description" content="Field sensing systems for infrastructure and security.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://underseer-technologies.com/">
   <link rel="canonical" href="https://underseer-technologies.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260715-4">
-  <script src="script.js?v=20260715-4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260716-1">
+  <script src="script.js?v=20260716-1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="Underseer home">
-      <svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true">
-        <path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/>
-        <circle cx="36" cy="24" r="10"/>
-        <circle class="brand-pupil" cx="36" cy="24" r="3.5"/>
-      </svg>
+    <a class="brand" href="index.html" aria-label="Underseer home">
+      <svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/><circle cx="36" cy="24" r="10"/><circle class="brand-pupil" cx="36" cy="24" r="3.5"/></svg>
       <span>Underseer</span>
     </a>
 
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle>
-      <span>Menu</span>
-      <i aria-hidden="true"></i>
-    </button>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span>Menu</span><i aria-hidden="true"></i></button>
 
     <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
-      <a href="#mission">Mission</a>
       <a href="#products">Products</a>
-      <a href="#approach">Approach</a>
-      <a href="#company">About</a>
+      <a href="#updates">Updates</a>
+      <a class="mobile-nav-link" href="company.html">Company</a>
+      <a class="mobile-nav-link" href="work-with-us.html">Work with us</a>
     </nav>
+
+    <div class="company-menu" data-company-menu>
+      <button class="company-toggle" type="button" aria-expanded="false" aria-controls="company-dropdown" data-company-toggle>Company <span aria-hidden="true">+</span></button>
+      <div class="company-dropdown" id="company-dropdown" data-company-dropdown>
+        <div>
+          <span>Company</span>
+          <a href="company.html">About Underseer</a>
+          <a href="company.html#programs">Programs</a>
+          <a href="company.html#contact">Contact</a>
+        </div>
+        <div>
+          <span>Work with us</span>
+          <a href="work-with-us.html">Partners &amp; pilots</a>
+          <a href="work-with-us.html#opportunities">Opportunities</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="hero-field" aria-hidden="true">
-        <span class="scan-line"></span>
-        <span class="signal signal-one"></span>
-        <span class="signal signal-two"></span>
-        <span class="signal signal-three"></span>
-      </div>
-
+      <div class="hero-field" aria-hidden="true"><span class="scan-line"></span><span class="signal signal-one"></span><span class="signal signal-two"></span><span class="signal signal-three"></span></div>
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> Field intelligence systems</p>
+        <p class="eyebrow"><span></span> Field sensing systems</p>
         <h1>See what the surface misses.</h1>
         <div class="hero-bottom">
-          <p>Underseer develops passive sensing and decision-support systems for infrastructure and security applications.</p>
-          <a class="text-link" href="#products">Explore systems <span aria-hidden="true">↘</span></a>
+          <p>Underseer builds distributed seismic sensors that detect ground activity beyond conventional camera coverage.</p>
+          <a class="text-link" href="#products">View products <span aria-hidden="true">↘</span></a>
         </div>
       </div>
-
-      <aside class="hero-logo" aria-label="Underseer Technologies">
-        <img src="assets/underseer-logo.svg" alt="Underseer logo">
-      </aside>
-
-      <div class="hero-meta" aria-label="Company status">
-        <span>Orlando, Florida</span>
-        <span>Prototype development</span>
-        <span>Est. 2025</span>
-      </div>
-    </section>
-
-    <section class="mission section-pad" id="mission">
-      <div class="section-label">01 / Mission</div>
-      <div class="mission-copy">
-        <h2>Awareness should extend beyond the sensor you can see.</h2>
-        <p>Many sites rely on cameras and other high-end sensors, but those systems cannot cover every corridor, approach, or blind spot. Underseer is developing a passive field layer that detects activity and helps direct attention to the right place.</p>
-      </div>
-      <div class="mission-principles">
-        <article><span>01</span><h3>Passive by design</h3><p>Observe without adding another continuously transmitting sensor to the field.</p></article>
-        <article><span>02</span><h3>Built around constraints</h3><p>Power, placement, communications, maintenance, and integration are first-order requirements.</p></article>
-        <article><span>03</span><h3>Evidence before scale</h3><p>Performance claims follow controlled testing and representative field validation.</p></article>
-      </div>
+      <aside class="hero-logo" aria-label="Underseer Technologies"><img src="assets/underseer-logo.svg" alt="Underseer logo"></aside>
+      <div class="hero-meta" aria-label="Company status"><span>Orlando, Florida</span><span>Prototype development</span><span>Est. 2025</span></div>
     </section>
 
     <section class="products" id="products">
       <div class="products-head section-pad">
-        <div>
-          <div class="section-label">02 / Products</div>
-          <h2>One field stack.<br>Two operating layers.</h2>
-        </div>
-        <p>Hardware detects the event. Software helps determine why it matters. Both systems are currently in development.</p>
+        <div><div class="section-label">01 / Products</div><h2>Hardware in the field.<br>Context for the operator.</h2></div>
+        <p>Thistle detects ground-coupled activity. Riskseer is the software layer being developed to review and prioritize those events.</p>
       </div>
 
-      <div class="product-switcher" role="tablist" aria-label="Underseer products">
-        <button class="product-tab is-active" id="tab-thistle" type="button" role="tab" aria-selected="true" aria-controls="panel-thistle" data-product-tab="thistle">
-          <span>01</span> Thistle
-        </button>
-        <button class="product-tab" id="tab-riskseer" type="button" role="tab" aria-selected="false" aria-controls="panel-riskseer" data-product-tab="riskseer">
-          <span>02</span> Riskseer
-        </button>
-      </div>
-
-      <div class="product-panel thistle-panel is-active" id="panel-thistle" role="tabpanel" aria-labelledby="tab-thistle" data-product-panel="thistle">
+      <article class="product-panel product-showcase" id="thistle">
         <div class="product-visual thistle-carousel" data-carousel aria-label="Thistle development gallery">
           <div class="carousel-viewport">
             <figure class="carousel-slide is-active" data-carousel-slide>
-              <div class="concept-visual" aria-hidden="true">
-                <div class="ground-line"></div>
-                <div class="node node-a"><i></i></div>
-                <div class="node node-b"><i></i></div>
-                <div class="node node-c"><i></i></div>
-                <div class="wake-rings wake-a"></div>
-                <div class="wake-rings wake-b"></div>
-              </div>
+              <div class="concept-visual" aria-hidden="true"><div class="ground-line"></div><div class="node node-a"><i></i></div><div class="node node-b"><i></i></div><div class="node node-c"><i></i></div><div class="wake-rings wake-a"></div><div class="wake-rings wake-b"></div></div>
               <figcaption><span>01 / Conceptual view</span><strong>Distributed field layer</strong></figcaption>
             </figure>
             <figure class="carousel-slide prototype-slide" data-carousel-slide>
@@ -124,122 +88,63 @@
               <figcaption><span>03 / Extremely early testbed</span><strong>Architecture and integration work</strong></figcaption>
             </figure>
           </div>
-          <div class="carousel-status">
-            <span data-carousel-status aria-live="polite">01 / 03</span>
-          </div>
-          <p class="carousel-disclaimer">Prototype images show early development testbeds—not production hardware or final performance.</p>
+          <div class="carousel-status"><span data-carousel-status aria-live="off">01 / 03</span></div>
+          <p class="carousel-disclaimer">Early development testbeds—not production hardware or final performance.</p>
         </div>
         <div class="product-copy">
-          <p class="product-type">Distributed seismic wake layer</p>
+          <p class="product-type">Distributed seismic sensing / Prototype</p>
           <h3>Thistle</h3>
-          <p class="product-lead">A sparse, low-power sensing layer designed to extend awareness beyond conventional monitoring coverage.</p>
+          <p class="product-lead">Low-power sensing nodes for detecting ground-coupled activity outside conventional monitoring coverage.</p>
           <dl>
-            <div><dt>Role</dt><dd>Detect ground-coupled activity and cue higher-fidelity systems.</dd></div>
-            <div><dt>Architecture</dt><dd>Distributed sensing nodes with a local integration hub.</dd></div>
-            <div><dt>Status</dt><dd>Prototype development and bench validation.</dd></div>
+            <div><dt>Detects</dt><dd>Ground-coupled activity across a distributed field layer.</dd></div>
+            <div><dt>Connects</dt><dd>Designed to cue cameras, radar, DAS, VMS, and operator workflows.</dd></div>
+            <div><dt>Status</dt><dd>Bench and early field testing.</dd></div>
           </dl>
         </div>
-      </div>
+      </article>
 
-      <div class="product-panel riskseer-panel" id="panel-riskseer" role="tabpanel" aria-labelledby="tab-riskseer" data-product-panel="riskseer" hidden>
-        <div class="product-visual risk-visual" aria-hidden="true">
-          <div class="risk-grid"></div>
-          <span class="event event-a">EVENT / 07</span>
-          <span class="event event-b">SOURCE / THISTLE</span>
-          <span class="event event-c">REVIEW / PRIORITIZED</span>
-          <div class="risk-pulse"></div>
-          <span class="visual-caption">Operational context layer / conceptual view</span>
+      <article class="product-panel product-showcase" id="riskseer">
+        <div class="product-visual risk-visual" aria-label="Riskseer conceptual interface graphic">
+          <div class="risk-grid"></div><span class="event event-a">EVENT / 07</span><span class="event event-b">SOURCE / THISTLE</span><span class="event event-c">REVIEW / PRIORITIZED</span><div class="risk-pulse"></div><span class="visual-caption">Conceptual software view</span>
         </div>
         <div class="product-copy">
-          <p class="product-type">Decision-support software</p>
+          <p class="product-type">Decision-support software / In development</p>
           <h3>Riskseer</h3>
-          <p class="product-lead">The software layer above Thistle, intended to turn field events and operational context into prioritized, reviewable information.</p>
+          <p class="product-lead">Software for reviewing Thistle detections and putting them into operational context.</p>
           <dl>
-            <div><dt>Role</dt><dd>Combine detections with location, timing, and operator context.</dd></div>
-            <div><dt>Output</dt><dd>Structured events for review and existing monitoring workflows.</dd></div>
-            <div><dt>Status</dt><dd>Architecture definition alongside Thistle development.</dd></div>
+            <div><dt>Input</dt><dd>Detection, location, timing, and site information.</dd></div>
+            <div><dt>Output</dt><dd>Prioritized events for operator review.</dd></div>
+            <div><dt>Status</dt><dd>Concept development alongside Thistle.</dd></div>
           </dl>
         </div>
-      </div>
+      </article>
     </section>
 
-    <section class="stack section-pad" aria-labelledby="stack-title">
-      <div class="section-label">03 / System</div>
-      <div class="stack-heading">
-        <h2 id="stack-title">Designed to complement, not replace.</h2>
-        <p>Thistle adds another layer of awareness to the cameras, radar, DAS, and VMS already in use. It helps operators decide where to focus their attention.</p>
+    <section class="updates section-pad" id="updates" aria-labelledby="updates-title">
+      <div class="updates-head">
+        <div><div class="section-label">02 / News &amp; updates</div><h2 id="updates-title">From Underseer.</h2></div>
+        <p>Company milestones and development work.</p>
       </div>
-      <div class="stack-flow" aria-label="Underseer system flow">
-        <div><span>01</span><strong>Field event</strong><small>Ground-coupled activity</small></div>
-        <i aria-hidden="true">→</i>
-        <div><span>02</span><strong>Thistle</strong><small>Detect and localize</small></div>
-        <i aria-hidden="true">→</i>
-        <div><span>03</span><strong>Riskseer</strong><small>Add operational context</small></div>
-        <i aria-hidden="true">→</i>
-        <div><span>04</span><strong>Existing systems</strong><small>Operator review and response</small></div>
-      </div>
-    </section>
-
-    <section class="approach" id="approach">
-      <div class="approach-intro section-pad">
-        <div class="section-label">04 / Approach</div>
-        <h2>Deployment follows validation.</h2>
-        <p>We build Thistle in the lab, test it outside, and use the data to decide what changes next. Each version has to work better than the last.</p>
-      </div>
-      <ol class="validation-steps">
-        <li><span>01</span><div><strong>Define</strong><p>Set the environment, event, constraints, and measurable success criteria.</p></div></li>
-        <li><span>02</span><div><strong>Instrument</strong><p>Capture signals, power behavior, false triggers, communications, and environmental conditions.</p></div></li>
-        <li><span>03</span><div><strong>Break</strong><p>Test placement, soil, weather, noise, deployment friction, and integration assumptions.</p></div></li>
-        <li><span>04</span><div><strong>Advance</strong><p>Move forward only when results justify the next prototype or pilot scope.</p></div></li>
-      </ol>
-    </section>
-
-    <section class="programs section-pad" id="programs" aria-labelledby="programs-title">
-      <div class="programs-intro">
-        <div class="section-label">05 / Programs &amp; affiliations</div>
-        <h2 id="programs-title">Underseer at UCF.</h2>
-      </div>
-      <div class="program-grid">
-        <article class="program-card">
-          <div class="program-logo program-logo-light"><img src="assets/ucf-icorps.webp" width="261" height="353" loading="lazy" alt="UCF I-Corps and National Science Foundation logos"></div>
-          <div class="program-card-copy"><span>2025 / Participant</span><h3>UCF I-Corps</h3><p>Completed NSF I-Corps customer discovery through UCF, including more than 50 interviews used to test the initial market direction.</p></div>
+      <div class="update-grid">
+        <article class="update-card update-featured">
+          <div class="update-image"><img src="assets/thistle-field-test.webp" width="825" height="1100" loading="lazy" alt="Early Thistle sensing testbed collecting data outdoors"></div>
+          <div class="update-copy"><span>Development update</span><h3>Thistle moves outside.</h3><p>Early field testbeds are being used to collect ground-coupled signal data and guide the next hardware revision.</p><a href="#thistle">View Thistle ↗</a></div>
         </article>
-        <article class="program-card">
-          <div class="program-logo program-logo-dark"><img src="assets/ucf-upstarts.webp" width="800" height="800" loading="lazy" alt="UCF UpStarts Venture Incubation Program logo"></div>
-          <div class="program-card-copy"><span>Venture incubation</span><h3>UCF UpStarts</h3><p>Selected for the UCF UpStarts Venture Incubation Program while developing Underseer's early company and product foundations.</p></div>
+        <article class="update-card">
+          <div class="update-copy"><span>2025 / Company</span><h3>Underseer completes UCF I-Corps.</h3><p>More than 50 customer-discovery interviews helped test the company’s initial market direction.</p><a href="company.html#programs">Company programs ↗</a></div>
         </article>
-      </div>
-      <p class="program-note">Program names and marks belong to their respective institutions. Participation does not imply endorsement.</p>
-    </section>
-
-    <section class="company section-pad" id="company">
-      <figure class="founder-card">
-        <div class="founder-portrait"><img src="assets/silas-powers.webp" width="825" height="1100" loading="eager" alt="Silas Powers, founder and CEO of Underseer Technologies"></div>
-        <figcaption><strong>Silas Powers</strong><span>Founder &amp; CEO</span></figcaption>
-      </figure>
-      <div class="company-copy">
-        <div class="section-label">06 / About us</div>
-        <h2>About Underseer.</h2>
-        <p>Underseer Technologies was founded in Orlando in 2025. We build sensing hardware and software for infrastructure and security work.</p>
-        <blockquote><span>Mission</span> Build practical sensing tools that help protect infrastructure and give operators a clearer picture of what is happening in the field.</blockquote>
-        <div class="founder-bio"><span>Founder</span><p>Silas Powers is a University of Central Florida mechanical engineering student who works on low-power sensing hardware and infrastructure monitoring. He founded Underseer in 2025 and is currently developing Thistle.</p></div>
-        <div class="founder-links" aria-label="Silas Powers contact links">
-          <a href="mailto:silaspowersw2@gmail.com"><span>Email</span>silaspowersw2@gmail.com</a>
-          <a href="https://www.linkedin.com/in/silas-powers-b28302380" target="_blank" rel="noopener noreferrer"><span>Profile</span>LinkedIn ↗</a>
-        </div>
-        <div class="company-status"><span></span> Founded 2025 / Active development</div>
+        <article class="update-card">
+          <div class="update-copy"><span>Company</span><h3>Underseer joins UCF UpStarts.</h3><p>Underseer entered the venture incubation program while building its early company and product foundations.</p><a href="company.html#programs">Company programs ↗</a></div>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <a class="brand footer-brand" href="#top" aria-label="Back to top">
-      <svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/><circle cx="36" cy="24" r="10"/><circle class="brand-pupil" cx="36" cy="24" r="3.5"/></svg>
-      <span>Underseer</span>
-    </a>
-    <p>Underseer Technologies LLC<br>Orlando, Florida</p>
-    <p>Field sensing<br>Decision support</p>
-    <p class="copyright">© 2026 Underseer Technologies</p>
+    <a class="brand footer-brand" href="#top" aria-label="Back to top"><svg class="brand-mark" viewBox="0 0 72 48" aria-hidden="true"><path d="M4 24C13 10 24 4 36 4s23 6 32 20c-9 14-20 20-32 20S13 38 4 24Z"/><circle cx="36" cy="24" r="10"/><circle class="brand-pupil" cx="36" cy="24" r="3.5"/></svg><span>Underseer</span></a>
+    <div class="footer-links"><a href="#thistle">Thistle</a><a href="#riskseer">Riskseer</a><a href="#updates">Updates</a></div>
+    <div class="footer-links"><a href="company.html">Company</a><a href="work-with-us.html">Work with us</a><a href="mailto:silaspowersw2@gmail.com">Contact</a></div>
+    <p class="copyright">© 2026 Underseer Technologies<br>Orlando, Florida</p>
   </footer>
 </body>
 </html>
